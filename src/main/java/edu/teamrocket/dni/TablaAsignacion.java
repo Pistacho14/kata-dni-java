@@ -2,36 +2,35 @@ package edu.teamrocket.dni;
 
 class TablaAsignacion {
 
-    private final char[] tabla =  { 'T', 'R', 'W', 'A',
-                                    'G', 'M', 'Y', 'F',
-                                    'P', 'D', 'X', 'B', 
-                                    'N', 'J', 'Z', 'S',
-                                    'Q', 'V', 'H', 'L',
-                                    'C', 'K', 'E' };
+    private final char[] tabla = { 'T', 'R', 'W', 'A',
+            'G', 'M', 'Y', 'F',
+            'P', 'D', 'X', 'B',
+            'N', 'J', 'Z', 'S',
+            'Q', 'V', 'H', 'L',
+            'C', 'K', 'E' };
 
-    public char[] getTabla(){
+    public char[] getTabla() {
         return this.tabla;
     }
 
-    public char getLetra(int posicion){
+    public char getLetra(int posicion) {
 
-        try{
+        try {
             return this.tabla[posicion];
-        }
-        catch(ArrayIndexOutOfBoundsException exception){
+        } catch (ArrayIndexOutOfBoundsException exception) {
             throw new ArrayIndexOutOfBoundsException("Posición fuera de límite");
         }
     }
 
-    public char calcularLetra(String cifras){
+    public char calcularLetra(String cifras) {
 
         int dni = Integer.parseInt(cifras);
         int posicion = dni % this.tabla.length;
-        
+
         return this.tabla[posicion];
     }
-    
-    public boolean isLetraPermitida(char letra){
+
+    public boolean isLetraPermitida(char letra) {
 
         return new String(this.tabla).indexOf(letra) != -1;
     }
