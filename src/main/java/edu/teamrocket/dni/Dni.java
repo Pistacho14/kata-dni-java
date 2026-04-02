@@ -7,8 +7,6 @@ public class Dni {
     private final String dni;
     private String parteNumericaDni;
     private String parteAlfabeticaDni;
-    private boolean numeroSano;
-    private boolean letraSana;
     private final TablaAsignacion tablaAsignacion;
     private static final Integer LONGITUD_NUMEROS_DNI = 8;
 
@@ -17,8 +15,6 @@ public class Dni {
         this.dni = dni;
         this.parteAlfabeticaDni = "";
         this.parteNumericaDni = "";
-        this.numeroSano = false;
-        this.letraSana = false;
         this.tablaAsignacion = new TablaAsignacion();
     }
 
@@ -26,37 +22,14 @@ public class Dni {
         return dni;
     }
 
-    public String getParteNumericaDni() {
-        return parteNumericaDni;
-    }
-
     public void setParteNumericaDni(String parteNumericaDni) {
         this.parteNumericaDni = parteNumericaDni;
-    }
-
-    public String getParteAlfabeticaDni() {
-        return parteAlfabeticaDni;
     }
 
     public void setParteAlfabeticaDni(String parteAlfabeticaDni) {
         this.parteAlfabeticaDni = parteAlfabeticaDni;
     }
 
-    public boolean isNumeroSano() {
-        return numeroSano;
-    }
-
-    public void setNumeroSano(boolean numeroSano) {
-        this.numeroSano = numeroSano;
-    }
-
-    public boolean isLetraSana() {
-        return letraSana;
-    }
-
-    public void setLetraSana(boolean letraSana) {
-        this.letraSana = letraSana;
-    }
 
     public String extraerParteAlfabeticaDni(){
         this.separarDni();
@@ -88,10 +61,6 @@ public class Dni {
 
     public boolean checkLongitud(){
         return this.parteNumericaDni.length() == LONGITUD_NUMEROS_DNI;
-    }
-
-    public boolean checkCif(){
-        return this.checkNumeroDni() && this.checkLetra() && this.checkLongitud();
     }
 
     public boolean checkDni(){

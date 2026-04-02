@@ -9,10 +9,6 @@ public class TablaAsignacion {
             'Q', 'V', 'H', 'L',
             'C', 'K', 'E' };
 
-    public char[] getTabla() {
-        return this.tabla;
-    }
-
     public char getLetra(int posicion) {
 
         try {
