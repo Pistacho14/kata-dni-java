@@ -1,6 +1,6 @@
 package edu.teamrocket.dni;
 
-class TablaAsignacion {
+public class TablaAsignacion {
 
     private final char[] tabla = { 'T', 'R', 'W', 'A',
             'G', 'M', 'Y', 'F',
@@ -34,9 +34,13 @@ class TablaAsignacion {
 
         return new String(this.tabla).indexOf(letra) != -1;
     }
-}
 
-/*
- * def __repr__(self):
- * return "Tabla de asignación"
- */
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (char caracter : this.tabla) {
+            sb.append(caracter);
+        }
+        return sb.toString();
+    }
+}
