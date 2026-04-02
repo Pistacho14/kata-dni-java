@@ -5,7 +5,6 @@ Dni kata (Java)
 - [Manual](#manual)
     - [Requisitos](#requisitos)
     - [Instalación](#instalación)
-    - [Uso](#uso)
 - [Implementación](#implementación)
 - [Pruebas](#pruebas)
     - [Casos test](#casos-test)
@@ -20,7 +19,7 @@ Este kata ha sido completado por [**Dalila Teodosio**](https://github.com/Dalila
 ### Requisitos
 
 Los requisitos para el funcionamiento son:
-- [Java 21](https://www.java.com/es/) o superior.
+- [Java 21+](https://www.java.com/es/).
 - [Maven](https://maven.apache.org/).
 - [Git](https://git-scm.com/).
 
@@ -44,6 +43,10 @@ Crea el paquete:
 
 `mvn clean package`
 
+Para lanzar la aplicación usa el comando:
+
+`java -jar .\target\kata-dni-java-1.0-SNAPSHOT.jar`
+
 ### Windows
 
 Clona el repositorio de github:
@@ -61,8 +64,6 @@ Instala Maven:
 Crea el paquete:
 
 `mvn clean package`
-
-### Uso
 
 Para lanzar la aplicación usa el comando:
 
