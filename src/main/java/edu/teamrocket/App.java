@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.ThreadLocalRandom;
 
-import dni.Dni;
+import edu.teamrocket.dni.Dni;
 
 public class App {
 
@@ -99,7 +99,7 @@ public class App {
 			System.out.println("letra --> " + objetoDni.get().checkLetra());
 
 			try {
-				System.out.println("La letra debería ser --> " 
+				System.out.println("La letra debería ser --> "
 										+ objetoDni.get().obtenerLetra());
 			} catch (ArrayIndexOutOfBoundsException e) {
 				System.out.println("La letra es --> " +
